@@ -1,0 +1,45 @@
+@baseUrl = http://localhost:3333
+@authToken={{authenticate.response.body.access_token}}
+# @name create_account
+POST {{baseUrl}}/accounts
+Content-type: application/json
+
+{
+  "name": "John Doe",
+  "email": "jhondoe2@email.com",
+  "password": "123456"
+}
+
+### 
+
+# @name authenticate
+POST {{baseUrl}}/sessions
+Content-type: application/json
+
+{
+  "email": "danilloept3@gmail.com",
+  "password": "123456"
+}
+
+### 
+
+# @name create_question
+POST {{baseUrl}}/questions
+Content-type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "What is the best way to learn Node.js?",
+  "content": "I want to learn Node.js but I don't know how to start. Any tips?"
+}
+
+### 
+
+# @name fetch_recent_questions
+GET {{baseUrl}}/questions?page=2
+Content-type: application/json
+Authorization: Bearer {{authToken}}
+
+
+
+
