@@ -29,15 +29,15 @@ Content-type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "What is the best way to learn Node.js?",
-  "content": "I want to learn Node.js but I don't know how to start. Any tips?"
+  "title": "What is the best way to learn NestJS?",
+  "content": "I want to learn NestJS, but I don't know where to start. Can someone help me?"
 }
 
 ### 
 
 # @name fetch_recent_questions
-GET {{baseUrl}}/questions?page=2
-Content-type: application/json
+GET {{baseUrl}}/questions?page=1
+Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 

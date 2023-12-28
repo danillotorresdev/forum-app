@@ -4,6 +4,7 @@ import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { Either, right } from '@/core/either'
 import { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment'
 import { QuestionAttachmentList } from '@/domain/forum/enterprise/entities/question-attachment-list'
+import { Injectable } from '@nestjs/common'
 
 interface CreateQuestionUseCaseRequest {
   authorId: string
@@ -18,7 +19,8 @@ type CreateQuestionUseCaseResponse = Either<
     question: Question
   }
 >
-
+// Aqui a rocketseat abriu mao da abstracao da camada de dominio acoplando com o nestjs. O ideal seria criar uma outra classe que extende essa. Prefiro a verbosidade do que a acoplacao.
+@Injectable()
 export class CreateQuestionUseCase {
   constructor(private questionsRepository: QuestionsRepository) {}
 

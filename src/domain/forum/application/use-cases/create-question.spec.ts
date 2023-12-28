@@ -14,6 +14,7 @@ describe('Create Question', () => {
     inMemoryQuestionsRepository = new InMemoryQuestionsRepository(
       inMemoryQuestionAttachmentsRepository,
     )
+    // sut means System Under Test
     sut = new CreateQuestionUseCase(inMemoryQuestionsRepository)
   })
 
