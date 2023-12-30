@@ -6,7 +6,7 @@ Content-type: application/json
 
 {
   "name": "John Doe",
-  "email": "jhondoe2@email.com",
+  "email": "jhondoe3@email.com",
   "password": "123456"
 }
 
@@ -17,7 +17,7 @@ POST {{baseUrl}}/sessions
 Content-type: application/json
 
 {
-  "email": "danilloept3@gmail.com",
+  "email": "jhondoe3@email.com",
   "password": "123456"
 }
 
@@ -25,12 +25,12 @@ Content-type: application/json
 
 # @name create_question
 POST {{baseUrl}}/questions
-Content-type: application/json
+Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "What is the best way to learn PHP",
-  "content": "I want to learn PHP in a fast way, what is the best way to do that?"
+  "title": "Nova pergunta 3",
+  "content": "Teste"
 }
 
 ### 

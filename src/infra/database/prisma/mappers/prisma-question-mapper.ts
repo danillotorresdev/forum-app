@@ -10,7 +10,7 @@ export class PrismaQuestionMapper {
       {
         title: raw.title,
         content: raw.content,
-        authorId: new UniqueEntityID(raw.authorID),
+        authorId: new UniqueEntityID(raw.authorId),
         bestAnswerId: raw.bestAnswerId
           ? new UniqueEntityID(raw.bestAnswerId)
           : undefined,
@@ -25,7 +25,7 @@ export class PrismaQuestionMapper {
   static toPrisma(question: Question): Prisma.QuestionUncheckedCreateInput {
     return {
       id: question.id.toString(),
-      authorID: question.authorId.toString(),
+      authorId: question.authorId.toString(),
       bestAnswerId: question.bestAnswerId?.toString(),
       title: question.title,
       content: question.content,
