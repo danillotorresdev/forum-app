@@ -29,8 +29,8 @@ Content-type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "What is the best way to learn NestJS?",
-  "content": "I want to learn NestJS, but I don't know where to start. Can someone help me?"
+  "title": "What is the best way to learn PHP",
+  "content": "I want to learn PHP in a fast way, what is the best way to do that?"
 }
 
 ### 
